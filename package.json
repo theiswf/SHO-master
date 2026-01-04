@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "sho-master",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -13,7 +13,7 @@
     "@astrojs/alpinejs": "^0.4.3",
     "@types/alpinejs": "^3.13.11",
     "alpinejs": "^3.14.8",
-    "astro": "^5.1.10",
+    "astro": "^5.16.6",
     "motion": "^12.0.6",
     "tailwindcss-animated": "^2.0.0",
     "tailwindcss-intersect": "^2.2.0"
@@ -24,5 +24,18 @@
     "@tailwindcss/vite": "^4.0.0",
     "daisyui": "^5.5.5",
     "tailwindcss": "^4.0.0"
-  }
+  },
+  "description": "Clone github repo'et i VSCode eller lav et nyt repo på basis af templaten, og klon derfra",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theiswf/SHO-master.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theiswf/SHO-master/issues"
+  },
+  "homepage": "https://github.com/theiswf/SHO-master#readme"
 }
