@@ -1,0 +1,128 @@
+---
+import SubLayout from "../layouts/SubLayout.astro";
+import Button from '../components/Button.astro';
+import Link from '../components/Link.astro';
+import { Image } from 'astro:assets';
+import thumbsup from "../assets/images/thumbsup.png.webp";
+import Carousel from '../components/Carousel.astro';
+import Employees from "../components/Employees.astro";
+import Sticker from "../components/Sticker.astro";
+---
+<SubLayout title="Studenterhus Odense" headerBG="/header_index.svg" footerBG="/BG12.png.webp">
+	<Sticker></Sticker>
+	<div id="hero" class="relative h-screen w-full flex items-center justify-center">
+		<!-- Background image -->
+		<video muted autoplay loop playsinline disablepictureinpicture class="absolute inset-0 w-full h-[100vh] object-cover">
+			<source src="/herovideo.webm" type="video/webm">
+		</video>
+		
+		<!-- Centered hero logo -->
+		<img 
+			src="/sho_hero.svg" 
+			alt="logo"
+			class="relative opacity-80 w-80 md:w-100 lg:w-130 object-contain"
+			id="layer"
+			data-speed="2"
+		>
+	
+		<!-- Button -->
+		<div class="absolute bottom-20 right-10 md:right-50 md:top-150 md:bottom-30 lg:bottom-10 z-20 hidden" id="layer" data-speed="2">
+			<Button href="/volunteer" title="BLIV FRIVILLIG"></Button>
+		</div>
+	
+			<div class="absolute bottom-20 left-10 md:left-50 md:top-150 md:bottom-30 lg:bottom-10 z-20 hidden" id="layer" data-speed="2">
+			<Button href="/events" title="SE EVENTS"></Button>
+		</div>
+		<!-- Torn paper bottom overlay -->
+		<img 
+			src="/footerpaper-cropped.svg" 
+			class="absolute bottom-[-5px] left-0 w-full object-cover z-30 pointer-events-none rotate-180"
+		>
+	</div>
+	
+	
+	
+
+<!-- EVERYTHING UNDER THE HERO -->
+
+	<div class="relative text-(--color-text) bg-(--color-bg) py-16">
+		<img class="absolute hidden lg:block left-1.5 top-50 sketch" src="/notebook-sketch.svg" alt="sketch">
+		<img class="absolute hidden lg:block right-30 top-10 rotate-4 sketch" src="/beer-sketch.svg" alt="sketch">
+		<div class="mx-10 md:mx-50 lg:mx-80 bg-cover bg-[url('/cardeventsindex.png.webp')] rounded-3xl mb-16 drop-shadow-lg">
+			<div class="p-8">
+				<p class="text-mb-subheader1 lg:text-subheader1 font-header font-bold pb-4">Et hus for alle Odenses studerende</p>
+				<div class="lg:grid grid-cols-2 gap-10">
+					<div class="">
+						<p class="text-mb-body lg:text-body font-body pb-8">I hjertet af Odense Centrum finder du Studenterhus Odense; et  studenterhus, der fungerer som læsesal, café, bar, spillested og  forsamlingshus. Vi har åbent hver dag næsten hele året, hvor du har mulighed for at fordybe dig i dine studier, lave gruppearbejde, spille brætspil med dine venner, afholde møder, gå i byen eller komme til en af vores events.</p>
+						<Button title="SE EVENTS" href="/events"></Button>
+					</div>
+					<div class="h-50 overflow-hidden rounded-3xl hidden lg:block">
+						<img class="w-full h-full object-cover" src="indeximg1.webp" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mx-10 md:mx-50 lg:mx-80 bg-cover bg-[url('/cardfrivilligindex.png.webp')] rounded-3xl drop-shadow-lg">
+			<div class="p-8">
+				<p class="text-mb-subheader1 lg:text-subheader1 font-header font-bold pb-4">Et hus drevet af frivillighed</p>
+				<div class="lg:grid grid-cols-2 gap-10">
+					<div class="h-50 overflow-hidden rounded-3xl hidden lg:block">
+						<img class="w-full h-full object-cover" src="indeximg2.webp" alt="">
+					</div>
+					<div class="">
+						<p class="text-mb-body lg:text-body font-body pb-8">Studenterhus Odense er baseret på frivillighed. Det er vores seje frivillige, som driver huset i fællesskab med de ansatte, så du får en god oplevelse, når du besøger os under et arrangement.</p>
+						<Button title="BLIV FRIVILLIG" href="/events"></Button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="border-black my-20 mx-8 md:mx-20">
+		<div>
+			<h2 class="font-bold font-header text-mb-header text-center lg:text-header pb-4">SENESTE NYT</h2>
+			<p class="font-body text-mb-body text-center lg:text-body">Herunder ser du de sidste nyheder fra Studenterhus Odense.</p>
+		</div>
+		<div class="flex justify-center">
+			<div class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-10 m-20">
+				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_1.png.webp" alt="post 1"></a>
+				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_2.png.webp" alt="post 2"></a>
+				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_3.png.webp" alt="post 3"></a>
+				<a class="hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_4.png.webp" alt="post 4"></a>
+				<a class="hidden md:block lg:block hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_5.png.webp" alt="post 5"></a>
+				<a class="hidden md:block lg:block hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_6.png.webp" alt="post 6"></a>
+				<a class="hidden md:block lg:block hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_7.png.webp" alt="post 7"></a>
+				<a class="hidden md:block lg:block hover:scale-105 duration-300" href="https://www.instagram.com/studenterhusodense/?hl=en"><img src="/grid_element_8.png.webp" alt="post 8"></a>
+			</div>
+		</div>
+	</div>
+</MainLayout>
+
+
+    <script>
+        document.addEventListener("mousemove", parallax);
+        window.addEventListener("scroll", parallaxScroll);
+
+        function parallax(e) {
+            document.querySelectorAll("#layer").forEach(layer => {
+                const speed = Number(layer.getAttribute("data-speed")); // Convert to number
+
+                if (!isNaN(speed)) { // Ensure speed is a valid number
+                    const x = (window.innerWidth / 2 - e.clientX * speed) / 100;
+                    const y = (window.innerHeight / 2 - e.clientY * speed) / 100;
+
+                    (layer as HTMLElement).style.transform = `translateX(${x}px) translateY(${y}px)`;
+                }
+            });
+        }
+
+function parallaxScroll() {
+    const sketches = document.querySelectorAll(".sketch");
+    const scrollSpeed = 0.25;
+    const scrollY = window.scrollY;
+
+    sketches.forEach(sketch => {
+        sketch.style.transform = `translateY(${scrollY * scrollSpeed}px)`;
+    });
+}
+
+    
+</script>

@@ -1,0 +1,98 @@
+
+---
+import Button from "./Button.astro"
+---
+<div class="bg-bg py-10">
+<section class="border rounded-xl bg-white md:mx-10">
+
+    <!--Grid-->
+<div class="grid gird-cols-1 md:grid-cols-[1fr_2fr]">
+
+<!--Header Section-->
+
+<div class="bg-[url(public/BG22.png.webp)] object-cover bg-center rounded-xl">
+    <div class="px-6 py-6 md:py-20">
+    <h1 class="body text-mb-form md:text-form leading-form font-bold">BLIV FRIVILLIG</h1>
+    <div class="py-8 md:py-20">
+    <p class="body py-4 text-mb-body md:text-body">Søger du en stilling som praktikant istedet?</p>
+    <Button title="BLIV PRAKTIKANT" href="/intern" text="Frivillig"></Button>
+</div>
+</div>  
+</div>
+
+<!--Form Section-->
+ 
+    <div class="px-6 text-mb-body md:text-body py-10 text-black font-body">
+<p class="pb-4">Send os en ansøgning om at blive frivillig hos os, og så kan vi arrangere en samtale over en kop kaffe for at lære hinanden bedre at kende.</p>
+
+<p class="pb-4">Send os gerne spørgsmål du har, og vælg det område du gerne vil være frivillig i.</p>
+
+<div>
+ <div class="flex flex-wrap justify-center gap-5 text-text font-body text-mb-body mx-6">
+
+    <!-- Cafe / Bar -->
+    <label class="cursor-pointer">
+      <input type="radio" name="volunteer_area" value="cafe" class="peer hidden" />
+      <div class="border-3 border w-[105px] h-[105px] rounded-xl border-gray flex flex-col items-center p-5 gap-2 peer-checked:border-orange-500 duration-300">
+        <p>Cafe/Bar</p>
+        <img src="/bar-icon.svg" alt="Cafe/Bar" class="max-w-[30px]">
+      </div>
+    </label>
+
+    <!-- Foto / Grafik -->
+    <label class="cursor-pointer">
+      <input type="radio" name="volunteer_area" value="foto" class="peer hidden" />
+      <div class="border-3 border w-[105px] h-[105px] rounded-xl border-gray flex flex-col items-center p-5 gap-2 peer-checked:border-orange-500 duration-300">
+        <p>Foto/Grafik</p>
+        <img src="/foto-icon.svg" alt="Foto/Grafik" class="max-w-[30px]">
+      </div>
+    </label>
+
+    <!-- Event -->
+    <label class="cursor-pointer">
+      <input type="radio" name="volunteer_area" value="event" class="peer hidden" />
+      <div class="border-3 border w-[105px] h-[105px] rounded-xl border-gray flex flex-col items-center p-5 gap-2 peer-checked:border-orange-500 duration-300">
+        <p>Event</p>
+        <img src="/event-icon.svg" alt="Event" class="max-w-[30px]">
+      </div>
+    </label>
+
+    <!-- Handyperson -->
+    <label class="cursor-pointer">
+      <input type="radio" name="volunteer_area" value="handy" class="peer hidden" />
+      <div class="border-3 border w-[105px] h-[105px] rounded-xl border-gray flex flex-col items-center p-5 gap-2 peer-checked:border-orange-500 duration-300">
+        <p>Handyperson</p>
+        <img src="/handy-icon.svg" alt="Handyperson" class="max-w-[30px]">
+      </div>
+    </label>
+
+    <!-- Bestyrelsen -->
+    <label class="cursor-pointer">
+      <input type="radio" name="volunteer_area" value="bestyrelse" class="peer hidden" />
+      <div class="border-3 border w-[105px] h-[105px] rounded-xl border-gray flex flex-col items-center p-5 gap-2 peer-checked:border-orange-500 duration-300">
+        <p>Bestyrelsen</p>
+        <img src="/calendar-icon.svg" alt="Bestyrelsen" class="max-w-[30px]">
+      </div>
+    </label>
+</div>
+<div>
+<form class="flex flex-col gap-3">
+<label for="first_name" class="text-mb-body md:text-body block text-body font-body">Dit Fulde Navn<span class="bg-[url(/BG15.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span></label>
+<input type="text" id="first_name" class="text-body focus:ring-0 rounded-lg border-2 placeholder:text-body border border-gray focus:border-orange-500 transition-all duration-500 focus:outline-none" placeholder="Navn" required/>
+<label for="email" class="text-mb-body md:text-body block text-body font-body">Din E-Mail Adresse<span class="bg-[url(/BG15.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span></label>
+<input type="email" id="email" class="text-body focus:ring-0 invalid:border-pink-500 invalid:text-pink-500 focus:invalid:border-pink-500 rounded-lg border-2 placeholder:text-body border border-gray focus:border-orange-500 focus:outline-none transition-all duration-500" placeholder="intern@email.dk" required/>
+<label for="first_name" class="text-mb-body md:text-body block text-body font-body">Fortæl os lidt om digselv, eller send os dine spørgsmål</label>
+<textarea id="textarea" class="text-body focus:ring-0 rounded-lg border-2 placeholder:text-body border border-gray focus:border-orange-500 transition-all duration-500 focus:outline-none" placeholder="Fortæl os om digselv eller stil de spørgsmål du har" required/>    
+
+<div class="pt-4">
+<button type="submit" class="w-full font-body font-bold py-2 px-4 bg-black border-2 border-black text-white rounded hover:bg-white hover:text-black duration-300 cursor-pointer">SEND ANSØGNING</button>
+</div>
+</div>
+</form>
+
+</div>
+
+</div>
+
+</section>
+</div>

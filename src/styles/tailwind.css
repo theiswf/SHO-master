@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
+@import "tailwindcss";
+@import "tailwindcss-animated";
+@import "tailwindcss-intersect";
+
+@theme {
+  /*FONTS*/
+
+  --font-header: "Cirka", sans-serif;
+  --font-body: "NeueMontreal", sans-serif;
+  --font-subheader: "Caveat", cursive;
+
+  /*COLORS*/
+
+  --color-bg: #fffcf8;
+  --color-text: #1e1e1e;
+
+  /*DESKTOP FONT SIZES*/
+
+  --text-body: 16px;
+  --text-header: 48px;
+  --text-subheader1: 36px;
+  --text-subheader2: 32px;
+  --text-form: 64px;
+  --text-footer: 20px;
+  --text-card: 20px;
+  --text-card2: 24px;
+  --text-button: 16px;
+
+  /*MOBILE FONT SIZES*/
+
+  --text-mb-body: 12px;
+  --text-mb-header: 32px;
+  --text-mb-subheader1: 24px;
+  --text-mb-subheader2: 24px;
+  --text-mb-form: 40px;
+  --text-mb-button: 12px;
+  --text-mb-card2: 16px;
+
+  /*LINE HEIGHTS*/
+  --leading-form: 0.8;
+  --leading-body: 1.3;
+}
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, forest;
+}
+
+@plugin "@tailwindcss/typography";
+@plugin '@tailwindcss/forms';
+
+@layer base {
+  body {
+    @apply bg-bg;
+  }
+
+  @font-face {
+    font-family: "NeueMontreal";
+    src: url("/fonts/NeueMontreal-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "NeueMontreal";
+    src: url("/fonts/NeueMontreal-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Cirka";
+    src: url("/fonts/Cirka-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Cirka";
+    src: url("/fonts/Cirka-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@layer components {
+}
+@layer utilities {
+}
+
+@utility max-ch-75 {
+  max-width: 75ch;
+}

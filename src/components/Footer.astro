@@ -1,0 +1,92 @@
+---
+const {src} = Astro.props;
+---
+
+<div class="relative w-full">
+
+    <!-- Sticker -->
+    <img 
+        src="footerpaper-cropped.svg" 
+        alt="" 
+        class="pointer-events-none absolute -top-px left-0 right-0 w-full object-cover z-30"
+    />
+    
+    <!-- Footer background + stacking context -->
+    <div 
+    style={`background-image: url('${src}');`}
+     class="relative flex flex-col bg-white text-black bg-cover bg-center pt-24">
+
+        <!-- 👇 NEW drawing layer (above background, below content) -->
+        <img 
+            src="sho_drawing.svg" 
+            alt="" 
+            class="pointer-events-none absolute bottom-0 right-0 w-150 object-contain z-10 opacity-30"
+        />
+
+        <!-- Footer content -->
+
+
+        <div class="relative z-20 mx-4"> 
+              
+            <div class="flex flex-col m-10 lg:grid lg:grid-cols-4 m-auto lg:place-items-start">
+
+                <div class="flex items-center h-full">
+                    <a href="/"><img class="h-18 w-auto sm:h-20 md:h-22" src="sho_logo_black.svg" alt=""></a>
+                </div>
+
+                <div class="flex flex-col font-body text-body text-footer my-6">
+                    <p class="font-header text-footer font-bold">VIL DU VIDE MERE?</p>
+                    <a class="my-1 hover:scale-103 hover:underline duration-200" href="/404">Vedtægter</a>
+                    <a class="my-1 hover:scale-103 hover:underline duration-200" href="/404">Cookiepolitik</a>
+                    <a class="my-1 hover:scale-103 hover:underline duration-200" href="/404">Logopakke</a>
+                    <a class="my-1 hover:scale-103 hover:underline duration-200" href="/404">Persondatapolitik</a>
+                    <a class="my-1 hover:scale-103 hover:underline duration-200" href="/404">Drifstaftale og regnskaber</a>
+                    <a class="my-1 hover:scale-103 hover:underline duration-200" href="/404">Bestyrelsen</a>
+                </div>
+
+                <div class="flex flex-col text-footer my-6 font-body">
+                    <p class="font-header font-bold text-footer">KONTAKT OS</p>
+                    <p class="my-2">info@studenterhus.dk</p>
+                    <p class="my-2">+45 42 72 01 38</p>
+                    <p class="my-2">Amfipladsen 6, 5000 Odense</p>
+                    <div class="flex gap-10 md:grid md:grid-cols-3 my-1">
+                        <a  href="https://www.facebook.com/StudenterhusOdense"><img class="hover:opacity-70 hover:scale-105 duration-300" src="facebook.svg" alt=""></a>
+                        <a  href="https://www.instagram.com/studenterhusodense/"><img class="hover:opacity-70 hover:scale-105 duration-300" src="instagram.svg" alt=""></a>
+                        <a  href="https://www.tiktok.com/@studenterhusodense"><img class="hover:opacity-70 hover:scale-105 duration-300" src="tiktok.svg" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="flex flex-col text-footer my-6 font-body">
+                    <p class="font-header font-bold my-1">ÅBNINGSTIDER</p>
+                    <div class="grid grid-cols-2">
+                        <div>
+                    <p class="my-2">MAN - ONS</p>
+                    <p class="my-2">TOR - LØR</p>
+                    <p class="my-2">SØN</p>
+                    </div>
+                    <div>
+                    <p class="my-2">10.00 - 22.00</p>
+                    <p class="my-2">10.00 - 24.00</p>
+                    <p class="my-2">12.00 - 18.00</p>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col lg:flex-row justify-center gap-4 pb-10">
+                <div class="flex gap-4">
+                    <img src="odensekommune.png.webp" alt="">
+                    <img src="albani.png.webp" alt="">
+                    <img src="sdu.png.webp" alt="">
+                </div>
+                <div class="flex gap-4">
+                    <img src="skf.png.webp" alt="">
+                    <img src="sdmusik.png.webp" alt="">
+                    <img src="ucl.png.webp" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

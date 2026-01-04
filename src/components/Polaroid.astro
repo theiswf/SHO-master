@@ -1,0 +1,28 @@
+---
+const { src,  name, mail, desc, link} = Astro.props;
+---
+<a href={link}><section class="polaroid cursor-pointer inline-block w-[275px] h-[400px] md:w-[300px] md:h-[450px] m-5 relative bg-white">
+    <div class="hover:scale-105hover:p-1 hover:scale-105 transition-all duration-300">
+         <div class="bg-white">
+        <img class="inset-0 w-full h-full object-cover drop-shadow-lg" src="public/polaroid2.svg" alt="Paper Card Image">
+    </div>
+        <div class="absolute -top-10 left-1/2 transform -translate-x-1/2">
+            <img src="public/tape.svg" alt="tape">
+        </div>
+        
+        <!--Polaroid Content-->
+        <div class="absolute inset-0 flex flex-col justify-start pt-6 px-6 pb-5 z-20">
+            <div>
+                <img src={src} alt="Employee Image">
+            </div>
+            <div class="text-black">
+                <h2 class="font-subheader text-card">{name}</h2>
+                <p class="font-body text-mb-body">{mail}</p>
+                <p class="font-body md:text-body text-mb-body">{desc}</p>
+            </div>
+        </div>
+    </div>
+</section>
+</a>
+
+

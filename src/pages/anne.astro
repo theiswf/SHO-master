@@ -1,0 +1,48 @@
+---
+import SubLayout from "../layouts/SubLayout.astro"
+---
+<SubLayout title="Sophie Alexia Narup Drewsen" headerBG="/headeromos.svg" footerBG="/BG18.pngpng.webp"> 
+ <section class="pt-25">
+
+<div class="border rounded-xl bg-white mx-5 md:mx-40">
+
+    <!-- Grid  -->
+
+    <div class="flex flex-col md:grid md:grid-cols-[1fr_2fr] items-center justify-items-center">
+       <!-- Polaroid Section -->
+        <div class="w-full bg-[url(/BG18.png.webp)] bg-cover bg-center bg-no-repeat rounded-t-xl md:roudd md:rounded-l-xl px-10 p-5">
+            <div class="inline-block m-2 relative">
+    <div>
+         <div>
+        <img class="inset-0 h-[250px] w-[500px] object-cover drop-shadow-lg" src="public/polaroid2.svg" alt="Paper Card Image">
+    </div> 
+        <!--Polaroid Content-->
+        <div class="absolute inset-0 flex flex-col justify-start pt-6 px-6 pb-5 z-20">
+            <div>
+                <img src=/betina.png.webp alt="Employee Image">
+            </div>
+            <div class="text-black">
+                <h2 class="font-subheader text-card">Anne Katrine Bagai</h2>
+                <p class="font-body md:text-body text-mb-body">SKRIV@SPOKENWORDFESTIVAL.DK</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+       <!-- Description Section -->
+       <div class="p-5 text-text justify-items-start">
+    <!-- Description -->
+<h1 class="font-subheader text-mb-card2 md:text-card2 pb-4 font-bold">Skrivelærer på SKRIV, Kommunikationsmedarbejder på Spoken Word Festival</h1>
+<p class="font-body md:text-body text-mb-body">Anne Katrine, bedre kendt som AK, forsøger hver dag at bidrage til et mere levende litterært program i Odense. Hun underviser både voksne og børn i at skrive, primært gennem skriveværkstedet SKRIV. Desuden har hun skrevet romanen Døbt, der udkom i 2024. Udover at bidrage til Odenses litterære program, laver Anne Katrine desuden Odenses absolut bedste butter chicken.</p>
+</div>
+</div>
+</div>
+</section>
+
+<div class="flex items-center flex-col pb-10 pt-10 cursor-pointer">
+    
+         <a href="/about#team"><img class="-rotate-180 flex items-center mx-auto justify-center hover:scale-110 duration-300" src="/arrow.svg" alt="arrow"></a>
+<p class="font-subheader font-bold text-text text-mb-subheader1 md:text-subheader1">Læs om resten af holdet</p>
+</div>
+</SubLayout>

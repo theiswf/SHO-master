@@ -1,0 +1,90 @@
+---
+import SubLayout from "../layouts/SubLayout.astro";
+import VolunteerCard from "../components/VolunteerCard.astro";
+import FormIntern from "../components/FormIntern.astro";
+import Sticker from "../components/Sticker.astro";
+---
+
+<SubLayout title="Bliv Praktikant" headerBG="/headerintern.svg" footerBG="/BG24.png.webp">
+    <Sticker></Sticker>
+<div class="pt-25">
+<FormIntern></FormIntern>
+</div>
+
+<hr class="border-black my-20 mx-8 md:mx-20">
+
+<!--Volunteer Info Cards-->
+<div class="text-text">
+    <h1 class="flex font-header font-bold text-mb-header lg:text-header justify-center pb-4">Om at være praktikant</h1>
+    <p class="font-body text-mb-body lg:text-body mx-10 md:mx-50 lg:mx-80 pb-4">Få et praktisk indblik i Odenses kulturliv og studiemiljø med god mulighed for læring og erfaring inden for dit uddannelsesområde. Bliv en del af et foreningsfællesskab med grobund for nye venskaber.</p>
+    <p class="font-body text-mb-body lg:text-body mx-10 md:mx-50 lg:mx-80 pb-16">Vi søger praktikanter til et ansvars- og meningsfuldt praktikophold, til glæde for dig selv og andre.</p>
+    <div class="flex flex-wrap justify-center mx-10 gap-5 my-8">
+        <p></p>
+        
+    </div>
+</div>
+
+
+<div>
+    <div class="flex flex-wrap justify-center mx-10 gap-5 my-8">
+    <img class="absolute hidden lg:block right-50 top-360 sketch" src="/book-sketch.svg" alt="sketch">
+        <div>
+
+        <VolunteerCard
+        header="Vi Søger"
+        desc="Vi søger løbende praktikanter, der kan arbejde fleksibelt og selvstændigt med de stillede opgaver, som bl.a. bliver:"    
+        list={[
+        "Planlægning og afvikling af events i Studenterhuset",
+        "Bar- og eventafvikling af eventuelle eksterne events",
+        "Afvikling af festivaler; Generator, Spoken Word, osv",
+        "Studiestartsmessen",
+        "Caféafvikling, herunder salg, mersalg og servicering af gæster",
+        "Markedsføring og branding, herunder SoMe",
+        "Frivilligledelse",
+        "Evt. grafiske opgaver til vores sociale og fysiske platforme",
+        "Evt. analyseopgaver, f.eks. gæsteprofiler, markedsanalyser, tilfredshedsundersøgelser",
+        "Ad hoc opgaver efter behov"
+       ]}>
+    </VolunteerCard>
+    </div>
+    <div>
+        <VolunteerCard
+        header="Vi Forventer"
+        list={[
+            "At du som person er udadvendt, handlingsorienteret, god til at samarbejde og arbejde selvstændigt og i godt humør.",
+            "At du er ansvarsfuld og initiativrig, selv er opsøgende i forhold til arbejdsopgaver og har mod på at kaste dig ud i forskelligartede opgaver.",
+            "At du prioriterer praktikarbejdet og er fleksibel med arbejdstidspunkter.",
+            "At du taler/skriver flydende engelsk, da det er en del af hverdagen på Studenterhuset.",
+            "Har du erfaring med foreningsarbejde og frivillige, er det et plus."
+            ]}
+></VolunteerCard>        
+    </div>
+    <div>
+        <VolunteerCard
+        header="Vi Tilbyder"
+        list={[
+            "At du bliver en del af en sjov og spændende arbejdsplads med højt til loftet, hvor vi kan tilpasse praktikopholdets arbejdsopgaver til dine interesser og kompetencer.",
+            "At du får mulighed for at prøve kræfter med mange forskelligartede opgaver efter interesseområde.",
+            "At du får mulighed for at bidrage til at gøre Odense til Danmarks bedste studieby."
+            ]}>
+
+        </VolunteerCard>
+    </div>
+</div>
+</SubLayout>
+
+
+<script>
+        window.addEventListener("scroll", parallaxScroll);
+
+function parallaxScroll() {
+    const sketches = document.querySelectorAll(".sketch");
+    const scrollSpeed = 0.25;
+    const scrollY = window.scrollY;
+
+    sketches.forEach(sketch => {
+        sketch.style.transform = `translateY(${scrollY * scrollSpeed}px)`;
+    });
+}
+
+</script>

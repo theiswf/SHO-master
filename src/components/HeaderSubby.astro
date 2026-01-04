@@ -1,0 +1,103 @@
+---
+import Logo from "../assets/sho_logo_black.svg";
+import Burger from "../assets/open.svg";
+
+const { src } = Astro.props;
+---
+
+<!-- STICKY HEADER -->
+<section
+  id="site-header"
+  style={`background-image: url('${src}');`}
+  class="
+    fixed top-0 left-0 w-full z-[100]
+    h-[150px]
+    bg-left bg-cover bg-no-repeat
+    transition-colors duration-300
+    text-black
+    pointer-events-none
+  "
+>
+  <!-- Header content container -->
+  <div class="absolute inset-0 flex items-center px-6">
+
+    <!-- LOGO -->
+    <div class="fixed top-6 left-6 lg:top-10 lg:left-10 items-center h-full transition-colors">
+      <a href="/" class="hover:scale-105 duration-300 flex items-center cursor-pointer
+        pointer-events-auto">
+        <Logo class="h-10 lg:h-15 w-auto duration-300" />
+      </a>
+    </div>
+
+    <!-- BURGER BUTTON -->
+    <label
+      for="my-drawer"
+      class="
+        fixed top-7.5 right-6 lg:top-12.5 lg:right-10
+        z-[9999]
+        cursor-pointer
+        pointer-events-auto
+        transition-colors duration-300
+      "
+    >
+      <Burger class="items-center h-6 lg:h-8 hover:scale-105 duration-300"/>
+    </label>
+
+    <!-- DRAWER SYSTEM -->
+    <div class="drawer drawer-end">
+      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content"></div>
+
+      <!-- SIDE MENU -->
+      <div class="drawer-side z-[200]">
+        <label for="my-drawer" class="drawer-overlay"></label>
+
+        <div
+          class="
+            min-h-full 
+            w-full lg:w-1/3
+            bg-cover bg-center bg-no-repeat
+            bg-[url('/burgermenubg2.svg')]
+            p-8
+            text-white
+            relative
+          "
+        >
+          <ul class="mt-5 md:mt-10 space-y-6 text-3xl font-semibold font-body text-text">
+            <li><a href="/" class="duration-200 hover:bg-[url(/BG12.png.webp)] hover:object-fill hover:bg-[80%_35%] hover:bg-clip-text hover:text-transparent">Hjem</a></li>
+            <li><a href="/about" class="duration-200 hover:bg-[url(/BG18.png.webp)] hover:object-cover hover:bg-[37%_47%] hover:bg-clip-text hover:text-transparent">Om Os</a></li>
+            <li><a href="/events" class="duration-200 hover:bg-[url(/eventsbg.svg)] hover:object-cover hover:bg-[70%_35%] hover:bg-clip-text hover:text-transparent">Events</a></li>
+            <li><a href="/volunteer" class="duration-200 hover:bg-[url(/BG22.png.webp)] hover:object-cover hover:bg-[40%_35%] hover:bg-clip-text hover:text-transparent">Bliv Frivillig</a></li>
+            <li><a href="/intern" class="duration-200 hover:bg-[url(/BG24.png.webp)] hover:object-cover hover:bg-[80%_35%] hover:bg-clip-text hover:text-transparent">Bliv Praktikant</a></li>
+            <li><a href="/aktuelle_stillinger" class="duration-200 hover:bg-[url(/BG26.png.webp)] hover:object-cover hover:bg-[80%_35%] hover:bg-clip-text hover:text-transparent">Aktuelle Stillinger</a></li>
+            <li><a href="/book" class="duration-200 hover:bg-[url(/BG28.png.webp)] hover:object-cover hover:bg-[70%_35%] hover:bg-clip-text hover:text-transparent">Book Lokale</a></li>
+          </ul>
+
+          <img
+            class="absolute opacity-50 pointer-events-none object-contain left-30 bottom-70 h-65 lg:h-70 -rotate-90 z-10"
+            src="/sho_drawing.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IntersectionObserver script to switch header text color -->
+  <script>
+    const header = document.getElementById("site-header");
+    const hero = document.getElementById("hero"); // Make sure your index page hero has id="hero"
+
+    if (hero) {
+      const observer = new IntersectionObserver(([entry]) => {
+        header.classList.toggle("text-white", entry.isIntersecting);
+        header.classList.toggle("text-black", !entry.isIntersecting);
+      }, { threshold: 0.1 });
+
+      observer.observe(hero);
+    } else {
+      // Default to black on pages without hero
+      header.classList.add("text-black");
+    }
+  </script>
+</section>

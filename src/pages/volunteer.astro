@@ -1,0 +1,109 @@
+---
+import FormVolunteer from "../components/FormVolunteer.astro"
+import SubLayout from "../layouts/SubLayout.astro"
+import VolunteerCard from "../components/VolunteerCard.astro"
+import EventFAQ from "../components/EventFAQ.astro"
+import Sticker from "../components/Sticker.astro"
+---
+
+<SubLayout title="Bliv Frivillig" headerBG="/headervolunteer.svg" footerBG="/BG22.png.webp">
+    <Sticker></Sticker>
+<div class="pt-25">
+    <FormVolunteer></FormVolunteer>
+</div>
+
+<hr class="border-black my-20 mx-8 md:mx-20">
+
+
+
+<!--Parallax IMG-->
+<div>
+	<img class="absolute hidden lg:block top-200 right-7 sketch" src="/coffee-sketch.svg" alt="sketch">
+<!--Text Section-->
+<div class="mx-10 md:mx-50 lg:mx-80 py-2 text-text pb-4">
+<h1 class="font-header text-header text-mb-header md:text-header text-center pb-4">Om at være frivillig</h1>
+<div class="font-body text-mb-body md:text-body">
+<p class="pb-4">Studenterhus Odense er baseret på frivillighed. Det er vores seje frivillige, som driver huset i fællesskab med de ansatte, så du får en god oplevelse, når du besøger os under et arrangement.</p>
+<p class="pb-4">Har du lyst til at bidrage til Odenses studiemiljø, score noget godt til CV´et, udvide dit netværk eller blive en del af et stærkt socialt fællesskab, så bliv en del af Studenterhus Odense. Vi kan altid bruge engagerede frivillige med forskellige kompetencer, interesser og baggrund, uanset om du har været frivillig før eller om det er første gang. Hvis du kan og vil, så får du lov på Studenterhus Odense.</p>
+<p class="pb-4">Herunder kan du se, hvilke opgaver vi primært har frivillige til, men tøv ikke med at kontakte os, hvis du kan noget unikt eller kan levere en arbejdsopgave, vi ikke vidste, vi manglede.</p>
+</div>
+</div>
+</div>
+
+<!--Volunteer Info Cards-->
+<div class="flex flex-wrap justify-center mx-10 gap-5 my-8">
+<div>
+    <VolunteerCard
+    src="/bar-icon.svg"
+    header="Cafe/Bar"
+    desc="Størstedelen af vores frivillige hjælper til bag baren i caféen og i garderoben. Her er de vigtigste opgaver i form af gæstebetjening, klargøring af events, produktion af drikkevarer, billetscanning, bemanding af garderoben osv. Her er du oftest på vagt samtidigt med andre frivillige.">
+    </VolunteerCard>
+</div>
+<div>
+    <VolunteerCard
+    src="/foto-icon.svg"
+    header="Foto/Grafik"
+    desc="Som PR-frivillig er du med til at bidrage til markedsføringen af Studenterhus Odenses og vores mange arrangementer. Her er du med til produktion af foto, video og grafisk materiale til vores SoMe-platforme og kan hjælpe til med dækningen af events både før, under og efter. Dette sker i tæt samarbejde med vores SoMe-, grafik- og kommunikationsansvarlige.">
+    </VolunteerCard>
+</div>
+<div>
+    <VolunteerCard
+    src="/event-icon.svg"
+    header="Events"
+    desc="Studenterhus Odense er vært for en række forskellige events, og her kan du være med til at stå for afviklingen. Som eventfrivillig står du ikke i baren, men er med før, under eller efter arrangementet og hjælper med bl.a. at sætte op, stå i garderoben, dækning på SoMe og meget mere.">
+    </VolunteerCard>
+</div>
+<div>
+    <VolunteerCard
+    src="/handy-icon.svg"
+    header="Handyperson"
+    desc="Er du mere klar på at hjælpe inden arrangementerne, eller ønsker du mere praktiske/tekniske opgaver som at stå for lyd og lys? Så kan du blive en af vores handy-frivillige, der laver atmosfære og sætter op eller hjælper til med lydprøver inden koncerter.">
+    </VolunteerCard>
+</div>
+<div>
+        <VolunteerCard
+    src="/calendar-icon.svg"
+    header="Bestyrelsen"
+    desc="Som frivillig i bestyrelsen er du med til at forme Studenterhus Odense og være en del af Odenses studiemiljø. Det er særligt studerende med interesse og ambitioner inden for ledelse, organisation, events og kultur, der engagerer sig i bestyrelsesarbejdet. Du kan læse mere om vores bestyrelse her.">
+    </VolunteerCard>
+</div>
+
+</div>
+
+<hr class="border-black my-20 mx-8 md:mx-20">
+
+<!--Ude af Huset-->
+<div>
+<!--Text Section-->
+<div class="mx-10 md:mx-50 lg:mx-80 py-2 text-text pb-4">
+<h1 class="font-header text-header text-mb-header md:text-header text-center pb-4">Ude af Huset</h1>
+<div class="font-body text-mb-body md:text-body">
+<p class="pb-4">Studenterhus Odense er en del af flere forskellige festivaler,  aktiviteter og koncerter i løbet af året som f.eks. Tinderbox,  Heartland, Magiske Dage, Spoken Word Festival osv.</p>
+<p class="pb-4">
+Du er altid velkommen til at kontakte os, hvis du er interesseret i at være frivillig gennem os. Hold øje med fanen aktuelle opslag for at se, hvornår vi søger frivillige til de forskellige festivaler og events.</p>
+<p class="pb-4">I 2025 er vi en del af og søger frivillige til:</p>
+</div>
+</div>
+ <div class="text-text">
+    <EventFAQ></EventFAQ>
+    </div>
+</div>
+
+
+</SubLayout>
+
+ <script>
+        window.addEventListener("scroll", parallaxScroll);
+
+function parallaxScroll() {
+    const sketches = document.querySelectorAll(".sketch");
+    const scrollSpeed = 0.25;
+    const scrollY = window.scrollY;
+
+    sketches.forEach(sketch => {
+        sketch.style.transform = `translateY(${scrollY * scrollSpeed}px)`;
+    });
+}
+
+    
+</script>

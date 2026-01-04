@@ -1,0 +1,80 @@
+---
+import Button from "./Button.astro"
+---
+<div class="bg-bg py-10">
+<section class="border rounded-xl bg-white md:mx-10">
+
+    <!--Grid-->
+<div class="grid gird-cols-1 md:grid-cols-[1fr_2fr]">
+
+<!--Header Section-->
+
+<div class="bg-[url(public/BG24.png.webp)] object-cover bg-center rounded-xl">
+    <div class="px-6 py-6 md:py-20">
+    <h1 class="body text-mb-form md:text-form leading-form font-bold">BLIV PRAKTIKANT</h1>
+    <div class="py-8 md:py-20">
+    <p class="body py-4 text-mb-body md:text-body">Søger du en stilling som frivillig istedet?</p>
+    <Button title="BLIV FRIVILLIG" href="/volunteer" text="Frivillig"></Button>
+</div>
+</div>  
+</div>
+
+<!--Form Section-->
+<div>
+    <div class="px-6 py-10 text-black font-body">
+<p class="pb-4">Vil du være praktikant på Studenterhus Odense?</p>
+
+<p class="pb-4">Send os en motiveret ansøgning og CV på <span class="bg-[url(/BG15.png.webp)] object-cover bg-center bg-clip-text text-transparent">info@studenterhus.dk</span> eller på nedenstående formular</p>
+    <form class="flex flex-col gap-3">
+<label for="first_name" class="block text-body font-body">Dit Fulde Navn<span class="bg-[url(/BG15.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span></label>
+<input type="text" id="first_name" class="focus:ring-0 rounded-lg border-2 placeholder:text-body border border-gray focus:border-purple-500 transition-all duration-500 focus:outline-none" placeholder="Navn" required/>
+<label for="email" class="block text-body font-body">Din E-Mail Adresse<span class="bg-[url(/BG15.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span></label>
+<input type="email" id="email" class="focus:ring-0 invalid:border-pink-500 invalid:text-pink-500 focus:invalid:border-pink-500 rounded-lg border-2 placeholder:text-body border border-gray focus:border-purple-500 focus:outline-none transition-all duration-500" placeholder="intern@email.dk" required/>
+<label for="first_name" class="block text-body font-body">Fortæl os lidt om digselv, eller send os dine spørgsmål</label>
+<textarea id="textarea" class="focus:ring-0 rounded-lg border-2 placeholder:text-body border border-gray focus:border-purple-500 transition-all duration-500 focus:outline-none" placeholder="Fortæl os om digselv eller stil de spørgsmål du har" required/>    
+<label for="file_input" class="block text-body font-body mb-2">
+  Vedhæft dit CV og motiveret ansøgning
+  <span class="bg-[url(/BG15.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span>
+</label>
+
+<div class="flex items-center border border-gray rounded-lg overflow-hidden focus-within:border-purple-500 focus-within:ring-0 transition-all duration-500">
+  
+  <!-- Placeholder text -->
+  <span id="file_name" class="flex-1 px-4 py-2 text-gray-600 truncate">Ingen filer valgt</span>
+  
+  <!-- Hidden file input -->
+  <input type="file" id="file_input" class="hidden" required multiple />
+  
+  <!-- Custom browse button -->
+  <label for="file_input" class="cursor-pointer px-4 py-2 bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all duration-200">
+    Vedhæft CV
+  </label>
+</div>
+
+<div class="pt-4">
+<button type="submit" class="w-full font-body font-bold py-2 px-4 bg-black border-2 border-black text-white rounded hover:bg-white hover:text-black duration-300 cursor-pointer">SEND ANSØGNING</button>
+</div>
+</form>
+
+</div>
+
+</div>
+
+</section>
+</div>
+
+<script>
+  const fileInput = document.getElementById('file_input');
+  const fileName = document.getElementById('file_name');
+
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files.length === 0) {
+      fileName.textContent = 'Ingen filer valgt';
+    } else if (fileInput.files.length === 1) {
+      fileName.textContent = fileInput.files[0].name;
+    } else {
+      // Show count of files if multiple selected
+      fileName.textContent = `${fileInput.files.length} filer valgt`;
+    }
+  });
+</script>

@@ -1,0 +1,40 @@
+---
+import SubLayout from '../layouts/SubLayout.astro';
+import Employees from '../components/Employees.astro';
+import Om from '../components/Om.astro';
+import FAQ from '../components/FAQ.astro';
+import Sticker from '../components/Sticker.astro';
+---
+
+<SubLayout title="Om Os" headerBG="/headeromos.svg" footerBG="/BG18.png.webp">
+    <Sticker></Sticker>
+    <article class="bg-bg text-black">
+        <Om></Om>
+<hr class="border-black my-10 md:my-20 mx-8 md:mx-20">
+<div id="team">
+        <Employees></Employees>
+</div>
+        <hr class="border-black my-10 md:my-20 mx-8 md:mx-20">
+        <FAQ></FAQ>
+        
+<img class="absolute hutidden lg:block right-20 top-120 sketch z-2" src="/games-sketch.svg" alt="sketch">
+
+    
+        
+    </article>
+
+    
+<script>
+        window.addEventListener("scroll", parallaxScroll);
+
+function parallaxScroll() {
+    const sketches = document.querySelectorAll(".sketch");
+    const scrollSpeed = 0.4;
+    const scrollY = window.scrollY;
+
+    sketches.forEach(sketch => {
+        sketch.style.transform = `translateY(${scrollY * scrollSpeed}px)`;
+    });
+}
+
+</script>

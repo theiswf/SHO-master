@@ -1,0 +1,66 @@
+---
+import BookForm from '../components/BookForm.astro';
+import SubLayout from '../layouts/SubLayout.astro';
+import Sticker from '../components/Sticker.astro';
+---
+
+<SubLayout headerBG="/headerbook.svg" title="Book Lokaler" footerBG="/BG28.png.webp">
+    <Sticker></Sticker>
+
+<img class="absolute hidden lg:block left-10 top-60 sketch" src="/toast-sketch.svg" alt="sketch">
+
+    <div class="mx-10 md:mx-50 lg:mx-80 text-text pt-25">
+        <h1 class="font-header font-bold text-mb-header md:text-header text-center pb-4">Book Lokaler</h1>
+        <div class="bg-[url(/BG28.png.webp)] object-cover bg-no-repeat bg-center p-6 px-12 rounded-lg drop-shadow-lg">
+            <h2 class="text-center font-header font-bold text-mb-subheader1 md:text-subheader1">Det er muligt at booke følgende lokaler</h2>
+            <ul class="list-disc list-inside font-body font-body text-mb-body md:text-body">
+                <li>“Salen” i stueetagen med plads til ca. 50 personer</li>
+                <li>Studiezonen på 1. sal med plads til ca. 80 personer</li>
+                <li>Mødelokale på 1. sal med plads til ca. 10 personer (udlånes kun i hverdage efter kl. 16 og i weekender)</li>
+                <li>Lukket mødeboks på 1. sal med plads til 4 personer</li>
+                <li>Caféområdet med plads til ca. 100 personer</li>
+                <li>Hele Studenterhus Odense med plads til ca. 140 personer</li>
+            </ul>
+        </div>
+    </div>
+<div class="relative z-10">
+    <BookForm></BookForm>
+</div>  
+<img class="absolute hidden lg:block right-10 top-300 sketch" src="/laptop-sketch.svg" alt="sketch">
+
+    
+    <div class="mx-10 md:mx-50 lg:mx-80 text-text pt-25 pb-4">
+        <h1 class="font-header font-bold text-mb-header md:text-header text-center pb-4">Vilkår for Booking</h1>
+        <p class="font-body text-mb-body md:text-body pb-4">Oplever du problemer med at sende bookingformularen, så prøv venligst en anden browser. Hvis du stadig har problemer, kan ovenstående  informationer sendes til <span class="bg-[url(/BG28.png.webp)] object-cover bg-center bg-clip-text text-transparent">mette@studenterhus.dk.</span></p>
+        <div class="bg-[url(/BG28.png.webp)] object-cover bg-no-repeat bg-center p-6 px-12 rounded-lg drop-shadow-lg">
+            <ul class="list-disc list-inside font-body font-body text-mb-body md:text-body">
+                <li>Der må ikke medbringes egen mad eller drikke</li>
+                <li>Mødebokse skal bookes mindst 2 dage før brug.</li>
+                <li>Husk at melde jeres ankomst i baren</li>
+                <li>Afmeldes bookingen <span class="font-bold">efter</span> bekræftelsen, er der et annulleringsgebyr på 300,- kr.</li>
+                <li>Afmeldes bookingen <span class="font-bold">under</span> 48 timer før arrangementet, er vi yderligere nødsaget til at tage betaling for forplejning samt bookinggebyret.</li>
+            </ul>
+        </div>
+    </div>
+<div>
+
+</div>
+
+</SubLayout>
+
+
+ <script>
+        window.addEventListener("scroll", parallaxScroll);
+
+function parallaxScroll() {
+    const sketches = document.querySelectorAll(".sketch");
+    const scrollSpeed = 0.3;
+    const scrollY = window.scrollY;
+
+    sketches.forEach(sketch => {
+        sketch.style.transform = `translateY(${scrollY * scrollSpeed}px)`;
+    });
+}
+
+    
+</script>

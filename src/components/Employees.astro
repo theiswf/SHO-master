@@ -1,0 +1,67 @@
+---
+import Polaroid from './Polaroid.astro';
+---
+
+<!-- Text Box -->
+<section class="mx-10 sm:mx-20 md:mx-45 lg:mx-80 text-black">
+    <h1 class="font-header bold text-mb-header md:text-header text-center py-2">MØD HOLDET</h1>
+    <p class="font-body text-mb-body md:text-body">Mød vores  fastansatte herunder. Det er dem, som driver Studenterhus Odense,  Generator og Spoken Word Festival til dagligt, og du er altid velkommen  til at kontakte dem på mail, hvis du har nogen spørgsmål.</p>
+</section>
+
+<!-- Polaroid Section -->
+<section class="flex flex-col items-center md:grid lg:grid-cols-3 md:grid-cols-2 justify-items-center mt-30">
+    <div class="rotate-1">
+<Polaroid
+		src="public/sophie.png.webp"
+		name="Sophie Alexia Narup Drewsen"
+		mail="SOPHIE@STUDENTERHUS.DK"
+		desc="Praktikantansvarlig, SoMe, grafik og kommunikation, Event- og frivilligkoordinator"
+		link="/sophie"
+	/>
+    </div>
+        <div class="-rotate-2">
+<Polaroid
+		src="/anja.png.webp"
+		name="Anja Følleslev"
+		mail="ANJA@STUDENTERHUS.DK"
+		desc="Daglig leder af Studenterhus Odense, Sekretariatschef for Generator Festival"
+		link="/anja"
+	/>
+    </div>
+        <div class="rotate-1">
+<Polaroid
+		src="/betina.png.webp"
+		name="Betina Følleslev"
+		mail="BETINA@SPOKENWORDFESTIVAL.DK"
+		desc="Festivalchef på Spoken Word Festival"
+		link="/betina"
+	/>
+    </div>
+       <div class="-rotate-2">
+<Polaroid
+		src="/mette.png.webp"
+		name="Mette Utzon"
+		mail="METTE@STUDENTERHUS.DK"
+		desc="Administration- og økonomiansvarlig"
+		link="/mette"
+	/>
+    </div>
+        <div class="rotate-1">
+<Polaroid
+		src="/nicolai.png.webp"
+		name="Nicoloai Willer Nielsen"
+		mail="NICOLAI@STUDENTERHUS.DK"
+		desc="Baransvarlig og eventkoordinator"
+		link="/nicolai"
+	/>
+    </div>
+        <div class="-rotate-2">
+<Polaroid
+		src="public/anne.png.webp"
+		name="Anne Katrine Bagai"
+		mail="SKRIV@SPOKENWORDFESTIVAL.DK"
+		desc="Skrivelærer på SKRIV, Kommunikationsmedarbejder på Spoken Word Festival"
+		link="anne"
+	/>
+    </div>
+</section>

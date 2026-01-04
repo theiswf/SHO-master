@@ -1,0 +1,194 @@
+---
+import Button from '../components/Button.astro';
+---
+<div class="bg-bg mt-10">
+  <section class="border rounded-xl bg-white md:mx-10">
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr]">
+
+      <!-- Header Section -->
+      <div class="bg-[url(public/BG28.png.webp)] bg-fit bg-center rounded-xl">
+        <div class="px-6 py-20">
+          <h1 class="body text-mb-form md:text-form leading-form font-bold">BOOK LOKALE</h1>
+        </div>
+      </div>
+
+      <!-- Form Section -->
+      <div>
+        <div class="px-6 py-10 text-black font-body">
+          <p class="pb-4">
+            Skal du afholde møde, arrangement, interview, fest eller andet, er det muligt at booke et af vores lokaler til dit event.
+          </p>
+          <p class="pb-4">
+            Send os din uforpligtende bookingforespørgsel via nedenstående formular.
+          </p>
+
+          <form class="flex flex-col gap-4">
+            <!-- Name + Phone -->
+            <div class="md:flex gap-4">
+              <div  class="w-full pb-4 md:pb-0">
+                <label for="first_name" class="block text-body font-body">
+                  Dit Fulde Navn
+                  <span class="bg-[url(/BG28.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span>
+                </label>
+                <input type="text" id="first_name" placeholder="Navn" required
+                  class="w-full focus:ring-0 rounded-lg border-2 border-gray placeholder:text-body focus:border-purple-500 transition-all duration-500 focus:outline-none"
+                />
+              </div>
+              <div class="w-full">
+                <label for="telefon" class="block text-body font-body">
+                  Telefonnummer
+                  <span class="bg-[url(/BG28.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span>
+                </label>
+                <input type="text" id="telefon" placeholder="Telefonnummer" required
+                  class="w-full focus:ring-0 rounded-lg border-2 border-gray placeholder:text-body focus:border-purple-500 transition-all duration-500 focus:outline-none"
+                />
+              </div>
+            </div>
+
+            <!-- Email + Organisation -->
+            <div class="md:flex gap-4">
+              <div class="w-full pb-4 md:pb-0">
+                <label for="email" class="block text-body font-body">
+                  Din E-Mail Adresse
+                  <span class="bg-[url(/BG28.png.webp)] object-cover bg-center  bg-clip-text text-transparent">*</span>
+                </label>
+                <input type="email" id="email" placeholder="intern@email.dk" required
+                  class="w-full focus:ring-0 rounded-lg border-2 border-gray placeholder:text-body focus:border-purple-500 transition-all duration-500 focus:outline-none"
+                />
+              </div>
+              <div class="w-full">
+                <label for="organisation" class="block text-body font-body">
+                  Organisation/Forening
+                  <span class="bg-[url(/BG28.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span>
+                </label>
+                <input type="text" id="organisation" placeholder="Organisation/Forening" required
+                  class="w-full focus:ring-0 rounded-lg border-2 border-gray placeholder:text-body focus:border-purple-500 transition-all duration-500 focus:outline-none"
+                />
+              </div>
+            </div>
+
+            <!-- Formål -->
+            <div>
+              <label for="formål" class="block text-body font-body">
+                Formål med arrangement
+                <span class="bg-[url(/BG28.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span>
+              </label>
+              <input type="text" id="formål" placeholder="Formål" required
+                class="w-full focus:ring-0 rounded-lg border-2 border-gray placeholder:text-body focus:border-purple-500 transition-all duration-500 focus:outline-none"
+              />
+            </div>
+
+            <!-- Lokale select -->
+            <div>
+              <label for="lokale" class="block text-body font-body">
+                Vælg Lokale
+                <span class="bg-[url(/BG28.png.webp)] object-cover bg-center  bg-clip-text text-transparent">*</span>
+              </label>
+              <select id="lokale" required
+                class="w-full focus:ring-0 rounded-lg border-2 border-gray focus:border-purple-500 transition-all duration-500 focus:outline-none"
+              >
+                <option value="" disabled selected>Vælg Lokale</option>
+                <option value="lokale1">Salen</option>
+                <option value="lokale2">Studiezonene</option>
+                <option value="lokale3">Mødelokale på 1. Sal</option>
+                <option value="lokale4">Mødeboks</option>
+                <option value="lokale5">Studenterhuset Vælger Lokale</option>
+              </select>
+            </div>
+
+            <!-- Deltagere + Dato -->
+            <div class="md:flex gap-4">
+              <div class="w-full pb-4 md:pb-0">
+                <label for="deltagere" class="block text-body font-body">
+                  Antal Deltagere
+                  <span class="bg-[url(/BG28.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span>
+                </label>
+                <input type="text" id="deltagere" placeholder="Antal Deltagere" required
+                  class="w-full focus:ring-0 rounded-lg border-2 border-gray placeholder:text-body focus:border-purple-500 transition-all duration-500 focus:outline-none"
+                />
+              </div>
+              <div class="w-full">
+                <label for="date" class="block text-body font-body">
+                  Dato for arrangement
+                  <span class="bg-[url(/BG28.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span>
+                </label>
+                <input type="text" id="date" placeholder="Skriv datoen til dit besøg" required
+                  class="w-full focus:ring-0 rounded-lg border-2 border-gray placeholder:text-body focus:border-purple-500 transition-all duration-500 focus:outline-none"
+                />
+              </div>
+            </div>
+
+            
+            <!-- Start + Slut -->
+            <div class="md:flex gap-4">
+              <div class="w-full pb-4 md:pb-0">
+                <label for="start" class="block text-body font-body">
+Start Tidspunkt                  <span class="bg-[url(/BG28.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span>
+                </label>
+                <input type="text" id="start" placeholder="Start tidspunkt" required
+                  class="w-full focus:ring-0 rounded-lg border-2 border-gray placeholder:text-body focus:border-purple-500 transition-all duration-500 focus:outline-none"
+                />
+              </div>
+              <div class="w-full">
+                <label for="slut" class="block text-body font-body">
+                 Slut Tidspunkt
+                  <span class="bg-[url(/BG28.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span>
+                </label>
+                <input type="text" id="slut" placeholder="Slut tidspunkt" required
+                  class="w-full focus:ring-0 rounded-lg border-2 border-gray placeholder:text-body focus:border-purple-500 transition-all duration-500 focus:outline-none"
+                />
+              </div>
+            </div>
+
+             <!-- Teknisk Udstyr -->
+            <div>
+              <label for="udstyr" class="block text-body font-body">
+                Ønsker du at leje noget teknisk udstyr?
+                <span class="bg-[url(/BG28.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span>
+              </label>
+              <input type="text" id="udstyr" placeholder="F.eks. mikrofon, projektor, lærred, osv." required
+                class="w-full focus:ring-0 rounded-lg border-2 border-gray placeholder:text-body focus:border-purple-500 transition-all duration-500 focus:outline-none"
+              />
+            </div>
+
+               <!-- Forplejninger Udstyr -->
+            <div>
+              <label for="udstyr" class="block text-body font-body">
+                Ønsker du at bestille forplejninger? (der må ikke medbringes egne drikke- og madvarer)
+                <span class="bg-[url(/BG28.png.webp)] object-cover bg-center bg-clip-text text-transparent">*</span>
+              </label>
+              <input type="text" id="udstyr" placeholder="F.eks. sandwich, sodavand, øl, vin, kaffe, snacks, osv." required
+                class="w-full focus:ring-0 rounded-lg border-2 border-gray placeholder:text-body focus:border-purple-500 transition-all duration-500 focus:outline-none"
+              />
+            </div>
+
+
+
+            <!-- Besked -->
+            <div>
+              <label for="textarea" class="block text-body font-body">
+                Stil spørgsmål eller fortæl os evt. mere om jeres arrangement 
+              </label>
+              <textarea id="textarea" placeholder="Fortæl os evt. mere om jeres arrangement" required
+                class="object-cover bg-center w-full focus:ring-0 rounded-lg border-2 border-gray placeholder:text-body focus:border-purple-500 transition-all duration-500 focus:outline-none"
+              ></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="pt-4">
+              <button type="submit"
+                class="w-full font-body font-bold py-2 px-4 bg-black border-2 border-black text-white rounded hover:bg-white hover:text-black duration-300 cursor-pointer"
+              >
+                SEND ANSØGNING
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+<script>
+  // You can add JavaScript here if needed in the future
